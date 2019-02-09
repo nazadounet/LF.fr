@@ -8,7 +8,7 @@ body, html{
 }
 
 .content{
-    z-index: 1;
+    z-index: 2;
 }
 
 h1{
@@ -21,6 +21,8 @@ h1{
 /******************************************** HEADER NAV BAR *******************************************/
 
 .navigation-top{
+    z-index: 2;
+
     background: #fff;
     border-bottom: none;
     font-size: 16px;
@@ -86,7 +88,7 @@ div#logo_container img{
 /******************************************** HEADER NAV BAR *******************************************/
 /******************************************** HEADER IMAGE *******************************************/
 div#header_image{
-    z-index: -1;
+    z-index: 1;
 
     width: 100vw;
     height: 100vh;
@@ -132,15 +134,26 @@ div#header_image{
     width: 100%;
     bottom: 0;
 
+}
+
+.about_icon_container .row{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
+div.about_icon_container .col-md{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 div.about_icon_container .about_item_icon_container{
-    width: 250px;
-    height: 320px;
+
+    width: 200px;
+    min-height: 320px;
 
     border-radius: 20px;
 

@@ -21,55 +21,67 @@
            ------------ ABOUT SECTION -----------
        -->
         <div class="about_section_container">
+
             <span class="about_section_first_description">
                 Logistic Solution gère le convoyage ainsi que le transport par camion de votre parc automobile.
             </span>
 
-            <div class="about_icon_container row">
+                <div class="about_icon_container">
 
-                <div class="about_item_icon_container col-sm">
+                    <div class="row">
 
-                    <span class="about_item_icon_title">
-                        Tout véhicule
-                    </span>
+                        <div class="col-md">
 
-                    <div class="about_img_container">
+                            <div class="about_item_icon_container">
 
-                        <img class="about_item_icon" src="images/about/all_car.png" alt="icon_all_vehicule">
+                                <span class="about_item_icon_title">
+                                    Tout véhicule
+                                </span>
+
+                                <div class="about_img_container">
+
+                                    <img class="about_item_icon" src="images/about/all_car.png" alt="icon_all_vehicule">
+
+                                </div>
+
+                                <span class="about_item_icon_description">
+                                    Deux roues, voiture, camionette ou encore poid lourd, nous prenons en charge tout type de véhicules
+                                </span>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md">
+                            <div class="about_item_icon_container">
+                                <span class="about_item_icon_title">
+                                    Sécurité
+                                </span>
+                                <div class="about_img_container">
+                                    <img class="about_item_icon" src="images/about/assurance.png" alt="icon_waranty">
+                                </div>
+                                <span class="about_item_icon_description">
+                                    Assurance AXA tout risque pour chacun de vos trajet ainsi que de plaque W.
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="col-md">
+                            <div class="about_item_icon_container">
+                                <span class="about_item_icon_title">
+                                    Service express
+                                </span>
+                                <div class="about_img_container">
+                                    <img class="about_item_icon" src="images/about/express.png" alt="icon_express">
+                                </div>
+                                <span class="about_item_icon_description">
+                                    Besoin d'un départ immédiat? <br>Nous organisons vos courses dans les 2 heures (en Île de France).
+                                </span>
+                            </div>
+                        </div>
 
                     </div>
-
-                    <span class="about_item_icon_description">
-                        Deux roues, voiture, camionette ou encore poid lourd, nous prenons en charge tout type de véhicules
-                    </span>
-
                 </div>
 
-                <div class="about_item_icon_container col-sm">
-                    <span class="about_item_icon_title">
-                        Sécurité
-                    </span>
-                    <div class="about_img_container">
-                        <img class="about_item_icon" src="images/about/assurance.png" alt="icon_waranty">
-                    </div>
-                    <span class="about_item_icon_description">
-                        Assurance AXA tout risque pour chacun de vos trajet ainsi que de plaque W.
-                    </span>
-                </div>
-
-                <div class="about_item_icon_container col-sm">
-                    <span class="about_item_icon_title">
-                        Service express
-                    </span>
-                    <div class="about_img_container">
-                        <img class="about_item_icon" src="images/about/express.png" alt="icon_express">
-                    </div>
-                    <span class="about_item_icon_description">
-                        Besoin d'un départ immédiat? <br>Nous organisons vos courses dans les 2 heures (en Île de France).
-                    </span>
-                </div>
-
-            </div>
             <span class="about_section_last_description">
                     Tout les itinéraires sont effectués par des chauffeurs professionnels, formés et agréés.
                     En France ainsi que dans toute l'Europe.
@@ -85,7 +97,7 @@
         ------------ CONVOYAGE SECTION -----------
         -->
 
-        <div class="convoyage_section_container">
+        <div class="convoyage_section_container row">
 
             <h1>Convoyage</h1>
 
