@@ -222,27 +222,78 @@ div.about_icon_container .about_item_icon_description{
 
 div.convoyage_section_container h3{
     text-align: center;
+    background: #f2f2f2;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+    padding-top: 20px;
+
 }
 
 /********* CONVOYAGE STEPS *********/
-div.convoyage_steps_container{
+div.convoyage_step_container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: #f2f2f2;
+
+
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-span.convoyage_steps{
-    font-size: 20px;
+.convoyage_step_container .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.convoyage_step{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom:40px;
+
+    height: 350px;
+}
+
+
+div.convoyage_step .convoyage_hr{
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 1px;
+    background-color: #c4c4c4;
+
+}
+
+
+span.convoyage_step_number{
+    font-size: 15px;
     font-weight: bolder;
 }
 
-span.convoyage_steps_title{
+span.convoyage_step_title{
     font-size: 18px;
+    white-space: nowrap;
 }
 
-div.convoyage_steps_container img{
+div.convoyage_step_container img{
     width: 70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.convoyage_step_description{
+    text-align: justify;
 }
 /********* CONVOYAGE STEPS *********/
 /******************************************** CONVYAGE SECTION  *******************************************/
