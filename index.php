@@ -18,7 +18,7 @@ include('include/header.php')
         <!--
            ------------ ABOUT SECTION -----------
        -->
-        <div class="about_section_container">
+        <div class="about_section_container section_container">
 
             <span class="about_section_first_description">
                 Logistic Solution gère le convoyage ainsi que le transport par camion de votre parc automobile.
@@ -95,7 +95,7 @@ include('include/header.php')
         ------------ CONVOYAGE SECTION -----------
         -->
 
-        <div class="convoyage_section_container">
+        <div class="convoyage_section_container section_container">
 
             <h1>Convoyage</h1>
 
@@ -224,6 +224,73 @@ include('include/header.php')
         <!--
         ------------ CONVOYAGE SECTION -----------
         -->
+
+        <!-------------------------------------------------->
+
+        <!--
+       ------------ TRANSPORT PAR CAMION SECTION -----------
+       -->
+
+        <div class="truc_transport_container section_container">
+            <h1>Transport par camion</h1>
+
+            <span class="truc_transport_prologue">
+                Dans le cas ou votre véhicule est en panne, non homologué pour la route ou tout simplement que vous ne souhaitez pas qu'il soit conduit par une autre personne, nous vous proposons un transport par camion.
+            </span>
+
+            <div class="truc_transport_description_container">
+
+                <div class="row">
+
+                    <div class="truc_transport_description_img col-md">
+                        <img src="http://logistic-solution.fr/wp-content/uploads/2018/09/shutterstock_678873277.jpg" alt="truc_transport_image"/>
+                    </div>
+
+                    <div class="truc_transport_description col-md">
+
+                        <span class="transport_truc_description_prologue">Nous prenons en charge tout type de véhicule a partir du moment ou leur poid n'excède pas <strong>5 tones charge comprise : </strong></span>
+                        <br />
+
+                        <div class="truc_transport_description_list_container">
+
+                            <div class="truc_transport_item">
+                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png" alt="list_item_icon"/>
+                                <span>Camionette</span>
+                            </div>
+
+                            <div class="truc_transport_item">
+                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png" alt="list_item_icon"/>
+                                <span>4X4</span>
+                            </div>
+
+                            <div class="truc_transport_item">
+                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png" alt="list_item_icon"/>
+                                <span>PickUp</span>
+                            </div>
+
+                            <div class="truc_transport_item">
+                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png" alt="list_item_icon"/>
+                                <span>Voiture</span>
+                            </div>
+
+                            <div class="truc_transport_item">
+                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png" alt="list_item_icon"/>
+                                <span>Moto / scooter</span>
+                            </div>
+
+                            <div class="truc_transport_item">
+                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png" alt="list_item_icon"/>
+                                <span>Voiture de luxe <br />(camion de transport special)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+       ------------ TRANSPORT PAR CAMION SECTION -----------
+       -->
 
         <!-------------------------------------------------->
 

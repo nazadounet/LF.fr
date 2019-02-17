@@ -17,6 +17,9 @@ h1{
     padding-bottom: 30px;
 }
 
+.section_container{
+}
+
 /******************************************** GENERALS RULES *******************************************/
 /******************************************** HEADER NAV BAR *******************************************/
 
@@ -297,3 +300,60 @@ div.convoyage_step_container img{
 }
 /********* CONVOYAGE STEPS *********/
 /******************************************** CONVYAGE SECTION  *******************************************/
+/******************************************** TRUC TRANSPORT SECTION  *******************************************/
+.truc_transport_description_container .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.truc_transport_prologue{
+    text-align: center;
+}
+
+.truc_transport_description_img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.truc_transport_description_container .col-md{
+    margin-top: 50px;
+}
+
+.truc_transport_description_img img{
+    width: 80%;
+}
+
+.truc_transport_description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.transport_truc_description_prologue{
+    text-align: center;
+}
+
+.truc_transport_description_list_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.truc_transport_item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.truc_transport_item img{
+    width: 20px;
+    margin-right: 20px;
+}
+/******************************************** TRUC TRANSPORT SECTION  *******************************************/
