@@ -289,8 +289,36 @@ include('include/header.php')
         </div>
 
         <!--
-       ------------ TRANSPORT PAR CAMION SECTION -----------
-       -->
+        ------------ TRANSPORT PAR CAMION SECTION -----------
+        -->
+
+        <!-------------------------------------------------->
+
+        <!--
+        ------------ TARIFS SECTION -----------
+        -->
+
+        <div class="tarifs_container section_container">
+            <h1>Tarifs</h1>
+
+            <div class="tarfis_prologue">
+                <span>
+                    Notre simulateur de tarifs vous permet d'avoir une idée plus ou moins précise du coût de votre trajet.
+                </span>
+                <span>
+                    Les départs en urgence (moins de 2 heures pour Île de France et moins de 5 heure hors Île de France) se voient appliqué des frais suplémentaires.
+                </span>
+            </div>
+
+            <div class="tarif_map_container">
+                <div id="map">
+                </div>
+            </div>
+        </div>
+
+        <!--
+        ------------ TARIFS SECTION -----------
+        -->
 
         <!-------------------------------------------------->
 

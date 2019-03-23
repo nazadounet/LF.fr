@@ -12,9 +12,6 @@ $( document ).ready(function() {
                 'width' : currentScroll
             })
         }
-
-
     });
-
     console.log( "ready!" );
 });
