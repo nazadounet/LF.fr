@@ -1,6 +1,6 @@
 /******************************************** GENERALS RULES *******************************************/
 body, html{
-    max-height: 100%;
+    height: 100%;
     overflow:auto;
     overflow-x: hidden;
     font-family: 'Source Sans Pro' !important;
@@ -358,5 +358,221 @@ div.convoyage_step_container img{
 }
 /******************************************** TRUC TRANSPORT SECTION  *******************************************/
 /******************************************** TARIFS SECTION  *******************************************/
+.tarif_map_container{
+    width: 100%;
+    height: 500px;
+    background: #808080;
+}
 
+#map{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1080px) {
+   #map{
+
+   }
+}
+
+@media screen and (max-width: 640px) {
+   #map{
+
+   }
+}
+
+@media screen and (max-width: 640px) {
+   #map{
+
+   }
+}
+
+@media screen and (max-width: 640px) {
+   #map{
+
+   }
+}
+
+@media screen and (max-width: 640px) {
+   #map{
+
+   }
+}
+
+/********************** input section ***********************/
+.inp {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: 280px;
+}
+.inp .label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    font-size: 16px;
+    color: #9098a9;
+    font-weight: 500;
+    transform-origin: 0 0;
+    transition: all 0.2s ease;
+}
+.inp .border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: #07f;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: all 0.15s ease;
+}
+.inp input {
+    -webkit-appearance: none;
+    width: 100%;
+    border: 0;
+    font-family: inherit;
+    padding: 12px 0;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid #c8ccd4;
+    background: none;
+    border-radius: 0;
+    color: #122844;
+    transition: all 0.15s ease;
+}
+
+.inpAnime input:not(:placeholder-shown) + span {
+    color: #5a667f;
+    transform: translateY(-26px) scale(0.75);
+}
+
+.inp input:focus {
+    background: none;
+    outline: none;
+}
+
+.inpAnime input:focus + span {
+    color: #122844;
+    transform: translateY(-26px) scale(0.75);
+}
+
+.inpAnime input:focus + span + .border {
+    transform: scaleX(1);
+}
+
+div.tarfis_prologue label {
+    position: relative;
+}
+
+div.tarfis_prologue svg {
+    width: 25px;
+}
+
+div.tarifs_container label span.tarifInputClear{
+    top: calc(50% - 12px);
+    right: 0;
+    position: absolute;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+span.tarifInputClear{
+    fill: #7f7f7f;
+}
+
+/********************** input section ***********************/
+/********************** radio button section ***********************/
+
+.btn-switch {
+    font-size: 20px;
+    position: relative;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-right: 25px;
+}
+.btn-switch__radio {
+    display: none;
+}
+.btn-switch__label {
+    display: inline-block;
+    padding: .75em .5em .75em .75em;
+    vertical-align: top;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1;
+    color: #666;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+}
+.btn-switch__label +  .btn-switch__label {
+    padding-right: .75em;
+    padding-left: 0;
+}
+.btn-switch__txt {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    min-width: 1.5em;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity .2s ease-in-out;
+    margin-top: 5px;
+}
+.btn-switch__radio_no:checked ~  .btn-switch__label_yes  .btn-switch__txt,
+.btn-switch__radio_yes:checked ~  .btn-switch__label_no  .btn-switch__txt {
+    opacity: 0;
+}
+.btn-switch__label:before {
+    max-height: 61px;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #f0f0f0;
+    border-radius: 1.5em;
+    box-shadow: inset 0 .0715em .3572em rgba(43,43,43,.05);
+    transition: background .2s ease-in-out;
+}
+.btn-switch__radio_yes:checked ~  .btn-switch__label:before {
+    background: #65bef0;
+}
+.btn-switch__label_no:after {
+    max-height: 40px;
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: .5em;
+    bottom: .5em;
+    left: .5em;
+    width: 2em;
+    background: #fff;
+    border-radius: 1em;
+    pointer-events: none;
+    box-shadow: 0 .1429em .2143em rgba(43,43,43,.2), 0 .3572em .3572em rgba(43,43,43,.1);
+    transition: left .2s ease-in-out, background .2s ease-in-out;
+}
+.btn-switch__radio_yes:checked ~  .btn-switch__label_no:after {
+    left: calc(100% - 2.5em);
+    background: #fff;
+}
+.btn-switch__radio_no:checked ~  .btn-switch__label_yes:before,
+.btn-switch__radio_yes:checked ~  .btn-switch__label_no:before {
+    z-index: 1;
+}
+.btn-switch__radio_yes:checked ~  .btn-switch__label_yes {
+    color: #fff;
+}
+
+p.btn-switch{
+    margin-bottom: 0px;
+}
+/********************** radio button section ***********************/
 /******************************************** TARIFS SECTION  *******************************************/

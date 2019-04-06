@@ -10,19 +10,20 @@
 
     <title>Logistic-solution</title>
 
-    <!-- STYLE -->
-    <link rel="stylesheet" href="style/main.css">
-    <!-- STYLE -->
-
     <!-- IMPORT -->
         <!-- GOOGLE FONT -->
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
         <!-- GOOGLE FONT -->
+
         <!-- BOOTSTRAP -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
               integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <!-- BOOTSTRAP -->
+
     <!-- IMPORT -->
+
+    <link rel="stylesheet" href="src/style/main.css">
+
 </head>
 <body>
 <header>

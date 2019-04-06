@@ -7,7 +7,7 @@ include('include/header.php')
        ------------ HEADER IMAGE SECTION -----------
     -->
     <div id="header_image">
-        <img id="header_image_logo" src="images/logo_LS_no_text.png" alt="company_logo">
+        <img id="header_image_logo" src="src/images/logo_LS_no_text.png" alt="company_logo">
     </div>
     <!--
       ------------ HEADER IMAGE SECTION -----------
@@ -38,7 +38,7 @@ include('include/header.php')
 
                             <div class="about_img_container">
 
-                                <img class="about_item_icon" src="images/about/all_car.png" alt="icon_all_vehicule">
+                                <img class="about_item_icon" src="src/images/about/all_car.png" alt="icon_all_vehicule">
 
                             </div>
 
@@ -55,7 +55,7 @@ include('include/header.php')
                                     Sécurité
                                 </span>
                             <div class="about_img_container">
-                                <img class="about_item_icon" src="images/about/assurance.png" alt="icon_waranty">
+                                <img class="about_item_icon" src="src/images/about/assurance.png" alt="icon_waranty">
                             </div>
                             <span class="about_item_icon_description">
                                     Assurance AXA tout risque pour chacun de vos trajet ainsi que de plaque W.
@@ -69,7 +69,7 @@ include('include/header.php')
                                     Service express
                                 </span>
                             <div class="about_img_container">
-                                <img class="about_item_icon" src="images/about/express.png" alt="icon_express">
+                                <img class="about_item_icon" src="src/images/about/express.png" alt="icon_express">
                             </div>
                             <span class="about_item_icon_description">
                                     Besoin d'un départ immédiat? <br>Nous organisons vos courses dans les 2 heures (en Île de France).
@@ -126,14 +126,14 @@ include('include/header.php')
                             <span class="convoyage_step_number">
                                 Etape 1
                             </span>
-                                <br/>
-                                <span class="convoyage_step_title">
+                            <br/>
+                            <span class="convoyage_step_title">
                                 Prise en charge de votre
                                 <br>
                                 vehicule
                             </span>
 
-                            <img src="images/convoyage/key.png" alt="key">
+                            <img src="src/images/convoyage/key.png" alt="key">
 
                             <span class="convoyage_step_description">
                                 <strong>
@@ -165,7 +165,7 @@ include('include/header.php')
                                 demandé
                             </span>
 
-                            <img src="images/convoyage/travel.png" alt="travel_icon">
+                            <img src="src/images/convoyage/travel.png" alt="travel_icon">
 
                             <span class="convoyage_step_description">
                                 Votre véhicule est acheminé au point de rendez-vous, France, Europe et sur d'autres continents.
@@ -198,7 +198,7 @@ include('include/header.php')
                                 souhaité
                             </span>
 
-                            <img src="images/convoyage/flag.png" alt="flag_icon">
+                            <img src="src/images/convoyage/flag.png" alt="flag_icon">
 
                             <span class="convoyage_step_description">
                                 Nous déposons le véhicule à l'endroit souhaitez,
@@ -243,44 +243,51 @@ include('include/header.php')
                 <div class="row">
 
                     <div class="truc_transport_description_img col-md">
-                        <img src="http://logistic-solution.fr/wp-content/uploads/2018/09/shutterstock_678873277.jpg" alt="truc_transport_image"/>
+                        <img src="http://logistic-solution.fr/wp-content/uploads/2018/09/shutterstock_678873277.jpg"
+                             alt="truc_transport_image"/>
                     </div>
 
                     <div class="truc_transport_description col-md">
 
                         <span class="transport_truc_description_prologue">Nous prenons en charge tout type de véhicule a partir du moment ou leur poid n'excède pas <strong>5 tones charge comprise : </strong></span>
-                        <br />
+                        <br/>
 
                         <div class="truc_transport_description_list_container">
 
                             <div class="truc_transport_item">
-                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png" alt="list_item_icon"/>
+                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png"
+                                     alt="list_item_icon"/>
                                 <span>Camionette</span>
                             </div>
 
                             <div class="truc_transport_item">
-                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png" alt="list_item_icon"/>
+                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png"
+                                     alt="list_item_icon"/>
                                 <span>4X4</span>
                             </div>
 
                             <div class="truc_transport_item">
-                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png" alt="list_item_icon"/>
+                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png"
+                                     alt="list_item_icon"/>
                                 <span>PickUp</span>
                             </div>
 
                             <div class="truc_transport_item">
-                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png" alt="list_item_icon"/>
+                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png"
+                                     alt="list_item_icon"/>
                                 <span>Voiture</span>
                             </div>
 
                             <div class="truc_transport_item">
-                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png" alt="list_item_icon"/>
+                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png"
+                                     alt="list_item_icon"/>
                                 <span>Moto / scooter</span>
                             </div>
 
                             <div class="truc_transport_item">
-                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png" alt="list_item_icon"/>
-                                <span>Voiture de luxe <br />(camion de transport special)</span>
+                                <img src="http://logistic-solution.fr/wp-content/uploads/2018/06/checked.png"
+                                     alt="list_item_icon"/>
+                                <span>Voiture de luxe <br/>(camion de transport special)</span>
                             </div>
                         </div>
                     </div>
@@ -298,7 +305,7 @@ include('include/header.php')
         ------------ TARIFS SECTION -----------
         -->
 
-        <div class="tarifs_container section_container">
+        <div class="tarifs_container section_container" id="tarif_section">
             <h1>Tarifs</h1>
 
             <div class="tarfis_prologue">
@@ -310,10 +317,115 @@ include('include/header.php')
                 </span>
             </div>
 
+            <div id="tarifSectionControl">
+                <label for="inputStart" class="inp inpAnime">
+                    <input type="text" id="inputStart" placeholder="&nbsp;">
+                    <span class="label">Départ</span>
+                    <span class="border"></span>
+                    <span class="tarifInputClear">
+                        <svg width="12px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 31.112 31.112" style="enable-background:new 0 0 31.112 31.112;" xml:space="preserve">
+        <polygon points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97
+            29.698,31.112 31.112,29.698 16.97,15.556 "/>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+        </svg>
+                    </span>
+                </label>
+
+                <label for="inputArrival" class="inp inpAnime">
+                    <input type="text" id="inputArrival" placeholder="&nbsp;">
+                    <span class="label">Destination</span>
+                    <span class="border"></span>
+                    <span class="tarifInputClear">
+                        <svg width="12px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 31.112 31.112" style="enable-background:new 0 0 31.112 31.112;" xml:space="preserve">
+        <polygon points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97
+            29.698,31.112 31.112,29.698 16.97,15.556 "/>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+                            <g>
+                            </g>
+        </svg>
+                    </span>
+                </label>
+
+                <div class="expressOptionSection">
+                    <p class="btn-switch">
+                        <input type="radio" value="express_yes" id="yes" name="switch" class="btn-switch__radio btn-switch__radio_yes" />
+                        <input type="radio" value="express_no" checked id="no" name="switch" class="btn-switch__radio btn-switch__radio_no" />
+                        <label for="yes" class="btn-switch__label btn-switch__label_yes">
+                            <span class="btn-switch__txt">Oui</span>
+                        </label>
+                        <label for="no" class="btn-switch__label btn-switch__label_no">
+                        <span class="btn-switch__txt">Non
+                        </span>
+                        </label>
+                    </p>
+                </div>
+
+            </div>
+            <!--
+            <button id="convoyage_price_show_map">Voir l'itinéraire</button>
             <div class="tarif_map_container">
                 <div id="map">
                 </div>
             </div>
+            -->
         </div>
 
         <!--
