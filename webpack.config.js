@@ -1,7 +1,7 @@
-const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 module.exports = {
+    externals: {
+        jquery: 'jQuery'
+    },
     module: {
         rules : [
             // JavaScript/JSX Files
@@ -12,6 +12,6 @@ module.exports = {
                     loader: 'babel-loader',
                 },
             },
-        ]
+        ],
     },
 };

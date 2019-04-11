@@ -318,104 +318,136 @@ include('include/header.php')
             </div>
 
             <div id="tarifSectionControl">
-                <label for="inputStart" class="inp inpAnime">
-                    <input type="text" id="inputStart" placeholder="&nbsp;">
-                    <span class="label">Départ</span>
-                    <span class="border"></span>
-                    <span class="tarifInputClear">
-                        <svg width="12px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                             viewBox="0 0 31.112 31.112" style="enable-background:new 0 0 31.112 31.112;" xml:space="preserve">
-        <polygon points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97
-            29.698,31.112 31.112,29.698 16.97,15.556 "/>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-        </svg>
-                    </span>
-                </label>
 
-                <label for="inputArrival" class="inp inpAnime">
-                    <input type="text" id="inputArrival" placeholder="&nbsp;">
-                    <span class="label">Destination</span>
-                    <span class="border"></span>
-                    <span class="tarifInputClear">
-                        <svg width="12px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                             viewBox="0 0 31.112 31.112" style="enable-background:new 0 0 31.112 31.112;" xml:space="preserve">
-        <polygon points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97
-            29.698,31.112 31.112,29.698 16.97,15.556 "/>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-                            <g>
-                            </g>
-        </svg>
-                    </span>
-                </label>
+                <div class="tarifSectionInputStartAndEnd row">
 
-                <div class="expressOptionSection">
-                    <p class="btn-switch">
-                        <input type="radio" value="express_yes" id="yes" name="switch" class="btn-switch__radio btn-switch__radio_yes" />
-                        <input type="radio" value="express_no" checked id="no" name="switch" class="btn-switch__radio btn-switch__radio_no" />
-                        <label for="yes" class="btn-switch__label btn-switch__label_yes">
-                            <span class="btn-switch__txt">Oui</span>
+                    <div class="tarifInputStartContainer col-md">
+                        <label id="tarifSectionInputStart" for="inputStart" class="inp inpAnime">
+                            <input type="text" class="enableClear" id="inputStart" placeholder="&nbsp;">
+                            <span class="label">Départ</span>
+                            <span class="border"></span>
+                            <span class="inputClearButton">
+                                <svg width="12px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 31.112 31.112" style="enable-background:new 0 0 31.112 31.112;" xml:space="preserve">
+            <polygon points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97
+                29.698,31.112 31.112,29.698 16.97,15.556 "/>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+            </svg>
+                            </span>
                         </label>
-                        <label for="no" class="btn-switch__label btn-switch__label_no">
-                        <span class="btn-switch__txt">Non
-                        </span>
+                        <span class="inputEmptyError">Ce champs est obligatoire</span>
+                    </div>
+
+                    <div class="tarifInputEndContainer col-md">
+                        <label id="tarifSectionInputEnd" for="inputArrival" class="inp inpAnime">
+                            <input type="text" class="enableClear" id="inputArrival" placeholder="&nbsp;">
+                            <span class="label">Destination</span>
+                            <span class="border"></span>
+                            <span class="inputClearButton">
+                                <svg width="12px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 viewBox="0 0 31.112 31.112" style="enable-background:new 0 0 31.112 31.112;" xml:space="preserve">
+            <polygon points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97
+                29.698,31.112 31.112,29.698 16.97,15.556 "/>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+            </svg>
+                            </span>
                         </label>
-                    </p>
+                        <span class="inputEmptyError">Ce champs est obligatoire</span>
+                    </div>
+                </div>
+
+                <div class="optionExpressContainer">
+
+                    <span class="optionExpressTitle">Est ce une urgence ?</span>
+
+                    <div class="expressOptionSection">
+                        <p class="btn-switch">
+                            <input type="radio" value="express_yes" id="yes" name="switch" class="btn-switch__radio btn-switch__radio_yes" />
+                            <input type="radio" value="express_no" checked id="no" name="switch" class="btn-switch__radio btn-switch__radio_no" />
+                            <label for="yes" class="btn-switch__label btn-switch__label_yes">
+                                <span class="btn-switch__txt">Oui</span>
+                            </label>
+                            <label for="no" class="btn-switch__label btn-switch__label_no">
+                            <span class="btn-switch__txt">Non
+                            </span>
+                            </label>
+                        </p>
+
+                        <img id="express_info_button" data-toggle="tooltip" data-placement="top" src="http://logistic-solution.fr/wp-content/uploads/2018/09/questions-circular-button.png" alt="information_icon">
+
+                    </div>
+                </div>
+
+                <div class="tarifSectionSubmitButtonContainer">
+                    <span class="tarifSectionSubmitButton">
+                        Calculer
+                    </span>
+                    <div class="loaderContainer">
+                        <span class="loaderTitle">Calcule en cours</span>
+                        <div class="loader"></div>
+                    </div>
+                </div>
+
+                <div class="resultTarfiSectionContainer">
+
                 </div>
 
             </div>

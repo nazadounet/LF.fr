@@ -94,19 +94,42 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mapScript_priceController__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mapScript/priceController */ \"./src/mapScript/priceController.js\");\n\nObject(_mapScript_priceController__WEBPACK_IMPORTED_MODULE_0__[\"log\"])(\"lol\");\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"jquery\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _tarifSectionScripts_cleanInput__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tarifSectionScripts/cleanInput */ \"./src/tarifSectionScripts/cleanInput.js\");\n/* harmony import */ var _tarifSectionScripts_expressTooltip__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./tarifSectionScripts/expressTooltip */ \"./src/tarifSectionScripts/expressTooltip.js\");\n\n/*===============================\n        TARIF SECTION\n===========================*/\n\n/*setting up clean input script*/\n\n\nObject(_tarifSectionScripts_cleanInput__WEBPACK_IMPORTED_MODULE_1__[\"cleanInput\"])();\n/*setting up express tooltip*/\n\n\n/**\n * @htmlIdetifier string : html element to get by jquery to display tooltip one mouse over\n */\n\nObject(_tarifSectionScripts_expressTooltip__WEBPACK_IMPORTED_MODULE_2__[\"expressTooltip\"])(\"[data-toggle='tooltip']\");\n/*===============================\n        TARIF SECTION\n===========================*/\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/mapScript/priceController.js":
-/*!******************************************!*\
-  !*** ./src/mapScript/priceController.js ***!
-  \******************************************/
-/*! exports provided: log */
+/***/ "./src/tarifSectionScripts/cleanInput.js":
+/*!***********************************************!*\
+  !*** ./src/tarifSectionScripts/cleanInput.js ***!
+  \***********************************************/
+/*! exports provided: cleanInput */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"log\", function() { return log; });\nvar log = function log(name) {\n  return console.log(name);\n};\n\n//# sourceURL=webpack:///./src/mapScript/priceController.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"cleanInput\", function() { return cleanInput; });\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"jquery\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar cleanInput = function cleanInput() {\n  //if there are input with enableClear class\n  if (jquery__WEBPACK_IMPORTED_MODULE_0___default()('input.enableClear').length > 0) {\n    //get all input with enableClear class\n    var allInputWithEnableClearOption = jquery__WEBPACK_IMPORTED_MODULE_0___default()('input.enableClear'); //getting all button clearInput on the page and attach event to clean input value on click\n\n    var allInputClearButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.inputClearButton');\n    allInputClearButton.each(function (index, htmlElement) {\n      //find throught the parent element the input to clean\n      var currentInputClearButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(htmlElement).parent().find('input');\n      jquery__WEBPACK_IMPORTED_MODULE_0___default()(htmlElement).click(function () {\n        currentInputClearButton.val('');\n        jquery__WEBPACK_IMPORTED_MODULE_0___default()(htmlElement).css('display', 'none');\n      });\n    }); //add event on each input.\n    // first, if on page load there still some data inside input, then imidiatly display inputclearButton\n\n    allInputWithEnableClearOption.each(function (index, htmlElement) {\n      var currentInputClearButton = jquery__WEBPACK_IMPORTED_MODULE_0___default()(htmlElement).parent().find('span.inputClearButton');\n\n      if (htmlElement.value !== \"\") {\n        currentInputClearButton.css('display', 'inherit');\n      } // On change, the clear button will apear\n\n\n      jquery__WEBPACK_IMPORTED_MODULE_0___default()(htmlElement).on('input', function () {\n        if (htmlElement.value !== \"\") {\n          currentInputClearButton.css('display', 'initial');\n        } else {\n          currentInputClearButton.css('display', 'none');\n        }\n      });\n    });\n  }\n};\n\n\n\n//# sourceURL=webpack:///./src/tarifSectionScripts/cleanInput.js?");
+
+/***/ }),
+
+/***/ "./src/tarifSectionScripts/expressTooltip.js":
+/*!***************************************************!*\
+  !*** ./src/tarifSectionScripts/expressTooltip.js ***!
+  \***************************************************/
+/*! exports provided: expressTooltip */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"expressTooltip\", function() { return expressTooltip; });\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"jquery\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\nvar expressTooltip = function expressTooltip(htmlIdentifier) {\n  var htmlExpressTooltip = jquery__WEBPACK_IMPORTED_MODULE_0___default()(htmlIdentifier);\n  htmlExpressTooltip.tooltip({\n    html: true,\n    container: 'body',\n    trigger: 'hover focus',\n    title: \"<div>Nous mettons nos équipe immédiatement à pied d'oeuvre pour effectuer le transport dans : <br><br>- les 2 heures pour les trajet en Ile de France <br> - dans les 5 heures pour un départ en dehors de l'Ile de France. <br><br>30 % du prix de la course hors taxe pour ce service.</div>\"\n  });\n};\n\n//# sourceURL=webpack:///./src/tarifSectionScripts/expressTooltip.js?");
+
+/***/ }),
+
+/***/ "jquery":
+/*!*************************!*\
+  !*** external "jQuery" ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = jQuery;\n\n//# sourceURL=webpack:///external_%22jQuery%22?");
 
 /***/ })
 

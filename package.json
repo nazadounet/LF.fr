@@ -34,6 +34,8 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
-    "css-loader": "^2.1.1"
+    "css-loader": "^2.1.1",
+    "externals": "0.0.1",
+    "jquery": "^3.3.1"
   }
 }

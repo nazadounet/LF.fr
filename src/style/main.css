@@ -399,6 +399,27 @@ div.convoyage_step_container img{
    }
 }
 
+#tarifSectionControl{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.tarifInputStartContainer, div.tarifInputEndContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 25px;
+}
+
+.tarifSectionInputStartAndEnd label{
+    width: 350px;
+}
+
 /********************** input section ***********************/
 .inp {
     position: relative;
@@ -470,7 +491,8 @@ div.tarfis_prologue svg {
     width: 25px;
 }
 
-div.tarifs_container label span.tarifInputClear{
+div.tarifs_container label span.inputClearButton{
+    display: none;
     top: calc(50% - 12px);
     right: 0;
     position: absolute;
@@ -482,8 +504,43 @@ span.tarifInputClear{
     fill: #7f7f7f;
 }
 
+/*input error empty span*/
+.inputEmptyError{
+    text-align: center;
+    vertical-align: center;
+    margin-top: 7px !important;
+    background:red !important;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    transition: height 0.7s, padding 0.7s;
+    width: 280px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+/*input error empty span*/
+
 /********************** input section ***********************/
 /********************** radio button section ***********************/
+
+div.optionExpressContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.expressOptionSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.optionExpressTitle{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
 
 .btn-switch {
     font-size: 20px;
@@ -493,7 +550,7 @@ span.tarifInputClear{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    margin-right: 25px;
+    margin-right: 15px;
 }
 .btn-switch__radio {
     display: none;
@@ -574,5 +631,84 @@ span.tarifInputClear{
 p.btn-switch{
     margin-bottom: 0px;
 }
+
+/***** tooltip *****/
+.expressOptionSection img{
+    width: 32px;
+}
+
+.tooltip-inner {
+    max-width: 350px;
+    /* If max-width does not work, try using width instead */
+    width: 250px;
+    background: #D3D3D3;
+    color: black;
+    font-size: 14px;
+    z-index: 100;
+}
+.arrow, .tooltip-arrow{
+    border-bottom-color : #D3D3D3 !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .tooltip {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.tarifSectionSubmitButtonContainer{
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 590px;
+    height: 50px;
+    background: #6abdea;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarifSectionSubmitButton{
+    font-size: 25px;
+    color: #FFFFFF;
+}
+
+/************************* LOADER ******************/
+.loaderContainer{
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.loaderTitle{
+    font-size: 25px;
+    color: #FFFFFF;
+}
+
+.loader {
+    margin-left: 15px ;
+    border: 5px solid #6abdea; /* Light grey */
+    border-top: 5px solid #FFFFFF; /* Blue */
+    border-bottom: 5px solid #FFFFFF; /* Blue */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/************************* LOADER ******************/
 /********************** radio button section ***********************/
 /******************************************** TARIFS SECTION  *******************************************/
