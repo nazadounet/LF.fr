@@ -399,7 +399,7 @@ div.convoyage_step_container img{
    }
 }
 
-#tarifSectionControl{
+#controlTraifSectionContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -416,23 +416,76 @@ div.tarifInputStartContainer, div.tarifInputEndContainer{
     margin-top: 25px;
 }
 
-.tarifSectionInputStartAndEnd label{
-    width: 350px;
+
+/********************** input select section ***********************/
+
+.selectdiv {
+    position: relative;
+    /*Don't really need this just for demo styling*/
+
 }
 
+ .selectdiv:after {
+    content: '\25bc';
+    font: normal normal normal 17px/1 FontAwesome;
+    color: #65bef0;
+    right: 2px;
+    top: 5px;
+    height: 40px;
+    padding: 15px 10px 0px 10px;
+    border-left: 2px solid #65bef0;
+    border-top: 2px solid #65bef0;
+    border-bottom: 2px solid #65bef0;
+    background: white;
+    position: absolute;
+    pointer-events: none;
+}
+
+/* IE11 hide native button (thanks Matt!) */
+ select::-ms-expand {
+    display: none;
+}
+
+ .selectdiv select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Add some styling */
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    text-align:left;
+
+    display: block;
+    width: 270px;
+    height: 40px;
+    float: right;
+    margin: 5px 0px;
+    padding: 0px 24px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: white;
+    border: 2px solid #65bef0;
+    background: #65bef0;
+    -ms-word-break: normal;
+    word-break: normal;
+}
+/********************** input select section ***********************/
 /********************** input section ***********************/
 .inp {
     position: relative;
     margin: auto;
     width: 100%;
-    max-width: 280px;
+    width: 350px;
 }
 .inp .label {
     position: absolute;
     top: 16px;
     left: 0;
     font-size: 16px;
-    color: #9098a9;
+    color: #122844;
     font-weight: 500;
     transform-origin: 0 0;
     transition: all 0.2s ease;
@@ -443,14 +496,14 @@ div.tarifInputStartContainer, div.tarifInputEndContainer{
     left: 0;
     height: 2px;
     width: 100%;
-    background: #07f;
+    background: #122844;
     transform: scaleX(0);
     transform-origin: 0 0;
     transition: all 0.15s ease;
 }
 .inp input {
     -webkit-appearance: none;
-    width: 100%;
+    width: 350px;
     border: 0;
     font-family: inherit;
     padding: 12px 0;
@@ -483,18 +536,18 @@ div.tarifInputStartContainer, div.tarifInputEndContainer{
     transform: scaleX(1);
 }
 
-div.tarfis_prologue label {
+div.prologTarifSectionContainer label {
     position: relative;
 }
 
-div.tarfis_prologue svg {
+div.prologTarifSectionContainer svg {
     width: 25px;
 }
 
 div.tarifs_container label span.inputClearButton{
     display: none;
-    top: calc(50% - 12px);
-    right: 0;
+    top: calc(50% - 15px);
+    right: -25px;
     position: absolute;
     padding-right: 5px;
     padding-left: 5px;
@@ -506,17 +559,21 @@ span.tarifInputClear{
 
 /*input error empty span*/
 .inputEmptyError{
+    color: #FFFFFF;
     text-align: center;
     vertical-align: center;
-    margin-top: 7px !important;
-    background:red !important;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
+    background: #FF0000;
+    -webkit-border-radius: 0 0 3px 3px;
+    -moz-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
     transition: height 0.7s, padding 0.7s;
-    width: 280px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    width: 350px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.inputEmptyError label{
+    text-align: center;
 }
 /*input error empty span*/
 
@@ -711,4 +768,202 @@ p.btn-switch{
 }
 /************************* LOADER ******************/
 /********************** radio button section ***********************/
+/********************** tarif result section ***********************/
+
+/********** TABLE SECTION ********$*/
+
+ div.result_from_map{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+ div.result_from_map table{
+    width: 90%;
+    background: #dbdbdb;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+    margin-bottom: 0 !important;
+}
+
+ div.result_from_map table, div.result_from_map tr{
+    border-collapse: collapse;
+}
+
+ .table_title{
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #65bef0;
+    color: white;
+    width: 100%;
+}
+
+ .border_table_right{
+    border-right: 1px solid white;
+}
+
+ .border_table_bottom{
+    border-bottom: 1px solid white;
+}
+
+ .table_cells_padding{
+    padding: 10px 10px 10px 10px;
+}
+
+ .table_sub_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background: #dbdbdb;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+ .table_sub_row img {
+    width: 28px;
+    background: #65bef0;
+    padding: 5px;
+    margin-right: auto;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+
+div.result_from_map .div_price_button{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+div.result_from_map .div_price_button div{
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background-color: #65bef0 !important;
+
+    -webkit-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+div.result_from_map #div_price_button div{
+    cursor: pointer !important;
+}
+
+div.result_from_map #div_edit_search_mobile{
+    padding-right: 15px;
+    padding-left: 15px;
+    cursor: pointer !important;
+}
+
+div.result_from_map .div_price_button img{
+    width: 32px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 10px;
+
+}
+/********** TABLE SECTION ********$*/
+
+/********** Mobile TABLE SECTION ********$*/
+ div.result_from_map_mobile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+ div.result_from_map_mobile table{
+    margin-bottom: 0 !important;
+}
+
+ div.result_from_map_mobile table tr th, div.result_from_map_mobile table tr td{
+    padding: 8px 15px;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+ div.result_from_map_mobile table td{
+    background: rgba(94, 176, 231, 0.53);
+}
+
+ div.result_from_map_mobile table tr th{
+    text-align: left;
+}
+
+ div.result_from_map_mobile table tr td{
+    text-align: center;
+}
+
+ div.result_from_map_mobile tr{
+    border-bottom:1px solid #61bdf2 !important;
+}
+
+ .mobile_table_header{
+    font-size: 30px;
+    text-align: center;
+}
+
+ .show_total_price_ttc{
+    font-weight: bold;
+}
+
+
+
+div.result_from_map_mobile .div_price_button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+div.result_from_map_mobile .div_price_button div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #aad5f2 !important;
+    cursor: pointer !important;
+    border-bottom: 1px solid #d6d6d6 !important;
+}
+
+#marker_img_mobile_container, #spotlight_img_mobile_container{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 15px;
+}
+
+div.result_from_map_mobile .div_price_button img{
+    width: 32px;
+}
+
+/********************** tarif result section ***********************/
 /******************************************** TARIFS SECTION  *******************************************/

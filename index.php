@@ -308,7 +308,7 @@ include('include/header.php')
         <div class="tarifs_container section_container" id="tarif_section">
             <h1>Tarifs</h1>
 
-            <div class="tarfis_prologue">
+            <div class="prologTarifSectionContainer">
                 <span>
                     Notre simulateur de tarifs vous permet d'avoir une idée plus ou moins précise du coût de votre trajet.
                 </span>
@@ -317,7 +317,21 @@ include('include/header.php')
                 </span>
             </div>
 
-            <div id="tarifSectionControl">
+            <div id="controlTraifSectionContainer">
+
+                <div class="inputSelectContainer">
+
+                    <div id="first_div" class="selectdiv">
+                        <label>
+                            <select id="select_service">
+                                <option value="0" selected> Choix du service </option>
+                                <option value="transport_camion">Transport par carmion</option>
+                                <option value="convoyage">Convoyage</option>
+                            </select>
+                        </label>
+                    </div>
+
+                </div>
 
                 <div class="tarifSectionInputStartAndEnd row">
 
@@ -327,90 +341,24 @@ include('include/header.php')
                             <span class="label">Départ</span>
                             <span class="border"></span>
                             <span class="inputClearButton">
-                                <svg width="12px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                 viewBox="0 0 31.112 31.112" style="enable-background:new 0 0 31.112 31.112;" xml:space="preserve">
-            <polygon points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97
-                29.698,31.112 31.112,29.698 16.97,15.556 "/>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-            </svg>
                             </span>
                         </label>
-                        <span class="inputEmptyError">Ce champs est obligatoire</span>
+                        <label class="inputEmptyError" for="inputStart">
+                            Ce champs est obligatoire
+                        </label>
                     </div>
 
                     <div class="tarifInputEndContainer col-md">
-                        <label id="tarifSectionInputEnd" for="inputArrival" class="inp inpAnime">
-                            <input type="text" class="enableClear" id="inputArrival" placeholder="&nbsp;">
+                        <label id="tarifSectionInputEnd" for="inputEnd" class="inp inpAnime">
+                            <input type="text" class="enableClear" id="inputEnd" placeholder="&nbsp;">
                             <span class="label">Destination</span>
                             <span class="border"></span>
                             <span class="inputClearButton">
-                                <svg width="12px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                 viewBox="0 0 31.112 31.112" style="enable-background:new 0 0 31.112 31.112;" xml:space="preserve">
-            <polygon points="31.112,1.414 29.698,0 15.556,14.142 1.414,0 0,1.414 14.142,15.556 0,29.698 1.414,31.112 15.556,16.97
-                29.698,31.112 31.112,29.698 16.97,15.556 "/>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-                                <g>
-                                </g>
-            </svg>
                             </span>
                         </label>
-                        <span class="inputEmptyError">Ce champs est obligatoire</span>
+                        <label class="inputEmptyError" for="inputEnd">
+                            Ce champs est obligatoire
+                        </label>
                     </div>
                 </div>
 
@@ -446,18 +394,126 @@ include('include/header.php')
                     </div>
                 </div>
 
-                <div class="resultTarfiSectionContainer">
+
+            </div>
+
+            <div class="resultTarfiSectionContainer">
+
+                <div class="result_from_map">
+
+                    <table>
+                        <tr>
+                            <th class="table_title border_table_bottom border_table_right" colspan="7">
+                                Récapitulatif
+                            </th>
+                        </tr>
+                        <tr>
+                            <th class="border_table_bottom border_table_right table_cells_padding">Service</th>
+                            <th class="border_table_bottom border_table_right table_cells_padding">Véhicule</th>
+                            <th class="border_table_bottom border_table_right table_cells_padding">Urgence</th>
+                            <th class="border_table_bottom border_table_right table_cells_padding">Distance</th>
+                            <th class="border_table_bottom border_table_right table_cells_padding">Suplément
+                                urgence
+                            </th>
+                            <th class="border_table_bottom border_table_right table_cells_padding">Total HT</th>
+                            <th class="border_table_bottom border_table_right table_cells_padding">Total TTC</th>
+                        </tr>
+                        <tr>
+                            <td class="border_table_bottom border_table_right table_cells_padding display_result show_service"></td>
+                            <td class="border_table_bottom border_table_right table_cells_padding display_result show_vehicul"></td>
+                            <td class="border_table_bottom border_table_right table_cells_padding display_result show_urgence"></td>
+                            <td class="border_table_bottom border_table_right table_cells_padding display_result show_km"></td>
+                            <td class="border_table_bottom border_table_right table_cells_padding display_result show_express_percent"></td>
+                            <td class="border_table_bottom border_table_right table_cells_padding display_result show_total_price_ht"></td>
+                            <td class="border_table_bottom border_table_right table_cells_padding display_result show_total_price_ttc"></td>
+                        </tr>
+                    </table>
+
+                    <div class="div_price_button">
+                        <div id="div_edit_search_desktop">
+                                <span>
+                                    <img src="http://logistic-solution.fr/wp-content/uploads/2018/10/search.png" alt="show_map">
+                                </span>
+                            <span>
+                                    Modifier la recherche
+                                </span>
+                        </div>
+                    </div>
+
+                    <!--
+                    <div class="table_sub_row">
+                        <img src="whatsapp-logo.png" alt="phone_icon">
+                        <span>Contactez-nous au : 06 59 12 76 66</span>
+                    </div>
+                    -->
+                </div>
+
+                <div class="result_from_map_mobile">
+
+                    <table style="width: 100%" cellspacing="0" cellpadding="0">
+                        <tr style="text-align: center">
+                            <th class="mobile_table_header" colspan="2">Récapitulatif</th>
+                        </tr>
+                        <tr class="row_container">
+                            <th class="row_title">Service :</th>
+                            <td class=" display_result show_service"></td>
+                        </tr>
+                        <tr class="row_container">
+                            <th class="row_title">Véhicule :</th>
+                            <td class="display_result show_vehicul"></td>
+                        </tr>
+                        <tr class="row_container">
+                            <th class="row_title">Urgence :</th>
+                            <td class="display_result show_urgence"></td>
+                        </tr>
+                        <tr class="row_container">
+                            <th class="row_title">Distance :</th>
+                            <td class="display_result show_km"></td>
+                        </tr>
+                        <tr class="row_container">
+                            <th class="row_title">Suplément <br> urgence :</th>
+                            <td class="display_result show_express_percent"></td>
+                        </tr>
+                        <tr class="row_container">
+                            <th class="row_title">Total HT :</th>
+                            <td class="display_result show_total_price_ht"></td>
+                        </tr>
+                        <tr class="row_container">
+                            <th class="row_title">Total TTC :</th>
+                            <td class="display_result show_total_price_ttc"></td>
+                        </tr>
+                    </table>
+
+
+                    <div class="div_price_button">
+                        <div id="div_show_itinerary_mobile">
+                                <span id="marker_img_mobile_container">
+                                    <img id="marker_img_mobile"
+                                         src="http://logistic-solution.fr/wp-content/uploads/2018/10/placeholder-1.png" alt="show_map">
+                                </span>
+                            <span class="table_button_text">
+                                    Voir l'itinéraire
+                                </span>
+                        </div>
+
+                        <div id="div_edit_search_mobile">
+                                <span id="spotlight_img_mobile_container">
+                                    <img id="spotlight_img_mobile"
+                                         src="http://logistic-solution.fr/wp-content/uploads/2018/10/search-1.png" alt="show_map">
+                                </span>
+                            <span class="table_button_text">
+                                    Modifier la recherche
+                                </span>
+                        </div>
+                    </div>
 
                 </div>
 
             </div>
-            <!--
-            <button id="convoyage_price_show_map">Voir l'itinéraire</button>
-            <div class="tarif_map_container">
-                <div id="map">
-                </div>
+            
+            <div class="mapTarifSectionContainer">
+                <div id="map"></div>
             </div>
-            -->
         </div>
 
         <!--
