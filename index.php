@@ -324,8 +324,8 @@ include('include/header.php')
                     <div id="first_div" class="selectdiv">
                         <label>
                             <select id="select_service">
-                                <option value="0" selected> Choix du service </option>
-                                <option value="transport_camion">Transport par carmion</option>
+                                <option value="0" selected> Type de véhicule </option>
+                                <option value="transport_camion"> V </option>
                                 <option value="convoyage">Convoyage</option>
                             </select>
                         </label>
@@ -337,7 +337,7 @@ include('include/header.php')
 
                     <div class="tarifInputStartContainer col-md">
                         <label id="tarifSectionInputStart" for="inputStart" class="inp inpAnime">
-                            <input type="text" class="enableClear" id="inputStart" placeholder="&nbsp;">
+                            <input type="text" class="enableClear inputToValidate" id="inputStart" placeholder="&nbsp;">
                             <span class="label">Départ</span>
                             <span class="border"></span>
                             <span class="inputClearButton">
@@ -350,7 +350,7 @@ include('include/header.php')
 
                     <div class="tarifInputEndContainer col-md">
                         <label id="tarifSectionInputEnd" for="inputEnd" class="inp inpAnime">
-                            <input type="text" class="enableClear" id="inputEnd" placeholder="&nbsp;">
+                            <input type="text" class="enableClear inputToValidate" id="inputEnd" placeholder="&nbsp;">
                             <span class="label">Destination</span>
                             <span class="border"></span>
                             <span class="inputClearButton">
@@ -384,7 +384,7 @@ include('include/header.php')
                     </div>
                 </div>
 
-                <div class="tarifSectionSubmitButtonContainer">
+                <div id="tarifSubmitButton" class="tarifSectionSubmitButtonContainer">
                     <span class="tarifSectionSubmitButton">
                         Calculer
                     </span>

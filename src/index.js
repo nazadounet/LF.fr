@@ -1,11 +1,12 @@
 import $ from 'jquery';
+import {InputValidator} from './tarifSectionScripts/InputValidator';
             /*===============================
                     TARIF SECTION
             ===========================*/
-
-               /*setting up clean input script*/
-    import {cleanInput} from './tarifSectionScripts/cleanInput';
-    cleanInput();
+    $('#tarifSubmitButton').click(() => {
+                   /*setting up inputValidator script*/
+        InputValidator();
+    });
 
               /*setting up express tooltip*/
     import {expressTooltip} from './tarifSectionScripts/expressTooltip';

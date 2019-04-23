@@ -559,6 +559,9 @@ span.tarifInputClear{
 
 /*input error empty span*/
 .inputEmptyError{
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     color: #FFFFFF;
     text-align: center;
     vertical-align: center;
@@ -568,8 +571,7 @@ span.tarifInputClear{
     border-radius: 0 0 3px 3px;
     transition: height 0.7s, padding 0.7s;
     width: 350px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+
 }
 
 .inputEmptyError label{
