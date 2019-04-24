@@ -3,10 +3,12 @@ import {InputValidator} from './tarifSectionScripts/InputValidator';
             /*===============================
                     TARIF SECTION
             ===========================*/
-    $('#tarifSubmitButton').click(() => {
-                   /*setting up inputValidator script*/
-        InputValidator();
-    });
+
+               /*setting up tarif submit button script*/
+
+    import {tarifSectionInputs} from './tarifSectionScripts/enableTarifSubmitButton';
+
+
 
               /*setting up express tooltip*/
     import {expressTooltip} from './tarifSectionScripts/expressTooltip';

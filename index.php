@@ -337,7 +337,7 @@ include('include/header.php')
 
                     <div class="tarifInputStartContainer col-md">
                         <label id="tarifSectionInputStart" for="inputStart" class="inp inpAnime">
-                            <input type="text" class="enableClear inputToValidate" id="inputStart" placeholder="&nbsp;">
+                            <input type="text" class="enableClear inputToValidate tarifInput" id="inputStart" placeholder="&nbsp;">
                             <span class="label">Départ</span>
                             <span class="border"></span>
                             <span class="inputClearButton">
@@ -350,7 +350,7 @@ include('include/header.php')
 
                     <div class="tarifInputEndContainer col-md">
                         <label id="tarifSectionInputEnd" for="inputEnd" class="inp inpAnime">
-                            <input type="text" class="enableClear inputToValidate" id="inputEnd" placeholder="&nbsp;">
+                            <input type="text" class="enableClear inputToValidate tarifInput" id="inputEnd" placeholder="&nbsp;">
                             <span class="label">Destination</span>
                             <span class="border"></span>
                             <span class="inputClearButton">
@@ -384,7 +384,7 @@ include('include/header.php')
                     </div>
                 </div>
 
-                <div id="tarifSubmitButton" class="tarifSectionSubmitButtonContainer">
+                <div id="tarifSubmitButton" class="tarifSectionSubmitButtonContainer disabled">
                     <span class="tarifSectionSubmitButton">
                         Calculer
                     </span>

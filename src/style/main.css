@@ -20,6 +20,12 @@ h1{
 .section_container{
 }
 
+.disabled{
+    background: #a0a6ab !important;
+    opacity: 0.8 !important;
+    color: white !important;
+}
+
 /******************************************** GENERALS RULES *******************************************/
 /******************************************** HEADER NAV BAR *******************************************/
 
