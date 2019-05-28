@@ -7,7 +7,7 @@ include('include/header.php')
        ------------ HEADER IMAGE SECTION -----------
     -->
     <div id="header_image">
-        <img id="header_image_logo" src="src/images/logo_LS_no_text.png" alt="company_logo">
+        <img id="header_image_logo" src="images/logo_LS_no_text.png" alt="company_logo">
     </div>
     <!--
       ------------ HEADER IMAGE SECTION -----------
@@ -38,7 +38,7 @@ include('include/header.php')
 
                             <div class="about_img_container">
 
-                                <img class="about_item_icon" src="src/images/about/all_car.png" alt="icon_all_vehicule">
+                                <img class="about_item_icon" src="images/about/all_car.png" alt="icon_all_vehicule">
 
                             </div>
 
@@ -55,7 +55,7 @@ include('include/header.php')
                                     Sécurité
                                 </span>
                             <div class="about_img_container">
-                                <img class="about_item_icon" src="src/images/about/assurance.png" alt="icon_waranty">
+                                <img class="about_item_icon" src="images/about/assurance.png" alt="icon_waranty">
                             </div>
                             <span class="about_item_icon_description">
                                     Assurance AXA tout risque pour chacun de vos trajet ainsi que de plaque W.
@@ -69,7 +69,7 @@ include('include/header.php')
                                     Service express
                                 </span>
                             <div class="about_img_container">
-                                <img class="about_item_icon" src="src/images/about/express.png" alt="icon_express">
+                                <img class="about_item_icon" src="images/about/express.png" alt="icon_express">
                             </div>
                             <span class="about_item_icon_description">
                                     Besoin d'un départ immédiat? <br>Nous organisons vos courses dans les 2 heures (en Île de France).
@@ -133,7 +133,7 @@ include('include/header.php')
                                 vehicule
                             </span>
 
-                            <img src="src/images/convoyage/key.png" alt="key">
+                            <img src="images/convoyage/key.png" alt="key">
 
                             <span class="convoyage_step_description">
                                 <strong>
@@ -165,7 +165,7 @@ include('include/header.php')
                                 demandé
                             </span>
 
-                            <img src="src/images/convoyage/travel.png" alt="travel_icon">
+                            <img src="images/convoyage/travel.png" alt="travel_icon">
 
                             <span class="convoyage_step_description">
                                 Votre véhicule est acheminé au point de rendez-vous, France, Europe et sur d'autres continents.
@@ -198,7 +198,7 @@ include('include/header.php')
                                 souhaité
                             </span>
 
-                            <img src="src/images/convoyage/flag.png" alt="flag_icon">
+                            <img src="images/convoyage/flag.png" alt="flag_icon">
 
                             <span class="convoyage_step_description">
                                 Nous déposons le véhicule à l'endroit souhaitez,
@@ -306,6 +306,20 @@ include('include/header.php')
         -->
 
         <div class="tarifs_container section_container" id="tarif_section">
+
+            <!--------- ALERT MAP ERROR --------->
+            <div class="alert alert-danger alert-dismissible fade show" id="alertMapRouteError" role="alert">
+                <button type="button" onclick="$('#alertMapRouteError').fadeOut()" class="close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="alert-heading">Erreur d'itinéraire</h4>
+                <hr>
+                <p class="mb-0">L'adresse de départ ou d'arrivé n'a pas pu être trouvé.</p>
+                <p class="mb-0">Veuillez vérifier les coordonnées.</p>
+            </div>
+            <!--------- ALERT MAP ERROR --------->
+
+
             <h1>Tarifs</h1>
 
             <div class="prologTarifSectionContainer">
@@ -321,12 +335,12 @@ include('include/header.php')
 
                 <div class="inputSelectContainer">
 
+                    <h6>Choix du vehicule</h6>
                     <div id="first_div" class="selectdiv">
                         <label>
-                            <select id="select_service">
-                                <option value="0" selected> Type de véhicule </option>
-                                <option value="transport_camion"> V </option>
-                                <option value="convoyage">Convoyage</option>
+                            <select id="select_car_type">
+                                <option value="basic_car">Voiture / Camionette / Moto</option>
+                                <option value="big_truck">Poid lourd ( > 5 tones)</option>
                             </select>
                         </label>
                     </div>
@@ -337,7 +351,7 @@ include('include/header.php')
 
                     <div class="tarifInputStartContainer col-md">
                         <label id="tarifSectionInputStart" for="inputStart" class="inp inpAnime">
-                            <input type="text" class="enableClear inputToValidate tarifInput" id="inputStart" placeholder="&nbsp;">
+                            <input autocomplete="off" type="text" class="enableClear inputToValidate tarifInput" id="inputStart" placeholder="&nbsp;">
                             <span class="label">Départ</span>
                             <span class="border"></span>
                             <span class="inputClearButton">
@@ -350,7 +364,7 @@ include('include/header.php')
 
                     <div class="tarifInputEndContainer col-md">
                         <label id="tarifSectionInputEnd" for="inputEnd" class="inp inpAnime">
-                            <input type="text" class="enableClear inputToValidate tarifInput" id="inputEnd" placeholder="&nbsp;">
+                            <input autocomplete="nope" type="text" class="enableClear inputToValidate tarifInput" id="inputEnd" placeholder="&nbsp;">
                             <span class="label">Destination</span>
                             <span class="border"></span>
                             <span class="inputClearButton">
@@ -385,10 +399,10 @@ include('include/header.php')
                 </div>
 
                 <div id="tarifSubmitButton" class="tarifSectionSubmitButtonContainer disabled">
-                    <span class="tarifSectionSubmitButton">
+                    <span class="tarifSectionSubmitButton" id="noLoader">
                         Calculer
                     </span>
-                    <div class="loaderContainer">
+                    <div class="loaderContainer" id="loader">
                         <span class="loaderTitle">Calcule en cours</span>
                         <div class="loader"></div>
                     </div>
@@ -399,7 +413,7 @@ include('include/header.php')
 
             <div class="resultTarfiSectionContainer">
 
-                <div class="result_from_map">
+                <div id="result_from_map" class="result_from_map">
 
                     <table>
                         <tr>
@@ -408,71 +422,50 @@ include('include/header.php')
                             </th>
                         </tr>
                         <tr>
-                            <th class="border_table_bottom border_table_right table_cells_padding">Service</th>
-                            <th class="border_table_bottom border_table_right table_cells_padding">Véhicule</th>
-                            <th class="border_table_bottom border_table_right table_cells_padding">Urgence</th>
-                            <th class="border_table_bottom border_table_right table_cells_padding">Distance</th>
-                            <th class="border_table_bottom border_table_right table_cells_padding">Suplément
-                                urgence
+                            <th class="border_table_bottom border_table_right table_cells_padding">
+                                Véhicule
                             </th>
-                            <th class="border_table_bottom border_table_right table_cells_padding">Total HT</th>
-                            <th class="border_table_bottom border_table_right table_cells_padding">Total TTC</th>
+                            <th class="border_table_bottom border_table_right table_cells_padding">
+                                Suplément <br> urgence
+                            </th>
+                            <th class="border_table_bottom border_table_right table_cells_padding">
+                                Distance
+                            </th>
+                            <th class="border_table_bottom border_table_right table_cells_padding">
+                                Total HT
+                            </th>
+                            <th class="border_table_bottom border_table_right table_cells_padding">
+                                Total TTC
+                            </th>
                         </tr>
                         <tr>
-                            <td class="border_table_bottom border_table_right table_cells_padding display_result show_service"></td>
                             <td class="border_table_bottom border_table_right table_cells_padding display_result show_vehicul"></td>
                             <td class="border_table_bottom border_table_right table_cells_padding display_result show_urgence"></td>
                             <td class="border_table_bottom border_table_right table_cells_padding display_result show_km"></td>
-                            <td class="border_table_bottom border_table_right table_cells_padding display_result show_express_percent"></td>
                             <td class="border_table_bottom border_table_right table_cells_padding display_result show_total_price_ht"></td>
                             <td class="border_table_bottom border_table_right table_cells_padding display_result show_total_price_ttc"></td>
                         </tr>
                     </table>
 
-                    <div class="div_price_button">
-                        <div id="div_edit_search_desktop">
-                                <span>
-                                    <img src="http://logistic-solution.fr/wp-content/uploads/2018/10/search.png" alt="show_map">
-                                </span>
-                            <span>
-                                    Modifier la recherche
-                                </span>
-                        </div>
-                    </div>
-
-                    <!--
-                    <div class="table_sub_row">
-                        <img src="whatsapp-logo.png" alt="phone_icon">
-                        <span>Contactez-nous au : 06 59 12 76 66</span>
-                    </div>
-                    -->
                 </div>
 
-                <div class="result_from_map_mobile">
+                <div id="result_from_map_mobile" class="result_from_map_mobile">
 
                     <table style="width: 100%" cellspacing="0" cellpadding="0">
                         <tr style="text-align: center">
                             <th class="mobile_table_header" colspan="2">Récapitulatif</th>
                         </tr>
                         <tr class="row_container">
-                            <th class="row_title">Service :</th>
-                            <td class=" display_result show_service"></td>
-                        </tr>
-                        <tr class="row_container">
                             <th class="row_title">Véhicule :</th>
                             <td class="display_result show_vehicul"></td>
                         </tr>
                         <tr class="row_container">
-                            <th class="row_title">Urgence :</th>
+                            <th class="row_title">Suplément urgence :</th>
                             <td class="display_result show_urgence"></td>
                         </tr>
                         <tr class="row_container">
                             <th class="row_title">Distance :</th>
                             <td class="display_result show_km"></td>
-                        </tr>
-                        <tr class="row_container">
-                            <th class="row_title">Suplément <br> urgence :</th>
-                            <td class="display_result show_express_percent"></td>
                         </tr>
                         <tr class="row_container">
                             <th class="row_title">Total HT :</th>
@@ -484,29 +477,6 @@ include('include/header.php')
                         </tr>
                     </table>
 
-
-                    <div class="div_price_button">
-                        <div id="div_show_itinerary_mobile">
-                                <span id="marker_img_mobile_container">
-                                    <img id="marker_img_mobile"
-                                         src="http://logistic-solution.fr/wp-content/uploads/2018/10/placeholder-1.png" alt="show_map">
-                                </span>
-                            <span class="table_button_text">
-                                    Voir l'itinéraire
-                                </span>
-                        </div>
-
-                        <div id="div_edit_search_mobile">
-                                <span id="spotlight_img_mobile_container">
-                                    <img id="spotlight_img_mobile"
-                                         src="http://logistic-solution.fr/wp-content/uploads/2018/10/search-1.png" alt="show_map">
-                                </span>
-                            <span class="table_button_text">
-                                    Modifier la recherche
-                                </span>
-                        </div>
-                    </div>
-
                 </div>
 
             </div>
@@ -514,7 +484,9 @@ include('include/header.php')
             <div class="mapTarifSectionContainer">
                 <div id="map"></div>
             </div>
+
         </div>
+
 
         <!--
         ------------ TARIFS SECTION -----------
@@ -522,6 +494,73 @@ include('include/header.php')
 
         <!-------------------------------------------------->
 
+        <!--
+        ------------ TARIFS SECTION -----------
+        -->
+        <div class="contact_container section_container" id="contact_section">
+
+            <h1>Contact</h1>
+
+            <div class="prologContactSectionContainer">
+                <span>
+                    Pour toute question ou demande de devis spéciale, vous pouvez nous envoyer un mail et nous vous répondrons dans les meilleurs délais.
+                </span>
+                <span>
+                   Vous avez aussi la possibilité d'exprimer votre demande par téléphone en cliquant le bouton flottant en bas à droite de l'écran.
+                </span>
+            </div>
+
+            <div class="contactFormContainer">
+
+                <div class="row">
+
+                    <div class="col col-md-3">
+                        <label for="subject" class="inp inpAnime">
+                            <input type="text" class="enableClear inputToValidate tarifInput" id="subject" placeholder="&nbsp;">
+                            <span class="label">Sujet*</span>
+                            <span class="border"></span>
+                        </label>
+                        <label class="inputEmptyError" for="inputStart">
+                            Ce champs est obligatoire
+                        </label>
+                    </div>
+
+                    <div class="col col-md-3">
+                        <label for="email" class="inp inpAnime">
+                            <input type="email" class="enableClear inputToValidate tarifInput" id="email" placeholder="&nbsp;">
+                            <span class="label">Votre email*</span>
+                            <span class="border"></span>
+                        </label>
+                        <label class="inputEmptyError" for="inputStart">
+                            Ce champs est obligatoire
+                        </label>
+                    </div>
+
+                    <div class="col col-md-3">
+                        <label id="tarifSectionInputStart" for="phoneNumber" class="inp inpAnime">
+                            <input type="tel" class="enableClear inputToValidate tarifInput" id="phoneNumber" placeholder="&nbsp;">
+                            <span class="label">Votre numéro</span>
+                            <span class="border"></span>
+                        </label>
+                        <label class="inputEmptyError" for="inputStart">
+                            Ce champs est obligatoire
+                        </label>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col col-12">
+                        <label for="message">Votre message</label>
+                        <textarea name="" id="message" cols="30" rows="10"></textarea>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--
+        ------------ TARIFS SECTION -----------
+        -->
 
     </div><!--CONTENT-->
 

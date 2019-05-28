@@ -1,1 +1,0 @@
-export const log = (name) => console.log(name);

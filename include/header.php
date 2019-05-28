@@ -11,18 +11,18 @@
     <title>Logistic-solution</title>
 
     <!-- IMPORT -->
-        <!-- GOOGLE FONT -->
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-        <!-- GOOGLE FONT -->
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <!-- GOOGLE FONT -->
 
-        <!-- BOOTSTRAP -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-              integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <!-- BOOTSTRAP -->
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- BOOTSTRAP -->
 
     <!-- IMPORT -->
 
-    <link rel="stylesheet" href="src/style/main.css">
+    <link rel="stylesheet" href="style/main.css">
 
 </head>
 <body>
@@ -53,4 +53,68 @@
     <!--
     ------------ NAVIGATION BAR -----------
     -->
+
+    <!--
+    ------------ SIDE NAV MENU -----------
+    -->
+
+    <div id="mobile_menu_overlay"></div>
+    <div id="mobile_menu_content">
+        <div id="mobile_close_menu_icon_container">
+            <img id="mobile_close_menu_icon"
+                 src="http://logistic-solution.fr/wp-content/uploads/2018/10/menu_close_black.png"
+                 alt="close_mobile_menu">
+        </div>
+        <div id="mobile_menu_logo_text_container">
+            <img id="mobile_menu_logo_text"
+                 src="http://logistic-solution.fr/wp-content/uploads/2018/11/logo_LS_text-only_black.png"
+                 alt="mobile_menu_logo_text">
+        </div>
+        <hr>
+        <ul id="mobile_menu_content_ul">
+            <li class="mobile_menu_item" id="to_masthead">
+                <img src="http://logistic-solution.fr/wp-content/uploads/2018/10/home.png" alt="home">
+                <span>
+                    Accueil
+                </span>
+            </li>
+            <li class="mobile_menu_item" id="to_convoyage">
+                <img src="http://logistic-solution.fr/wp-content/uploads/2018/10/transports.png" alt="ferry">
+                <span>
+                   Convoyage
+               </span>
+            </li>
+            <li class="mobile_menu_item" id="to_transport_camion">
+                <img src="http://logistic-solution.fr/wp-content/uploads/2018/10/truck.png" alt="truck_transport">
+                <span>
+                    Transport par camion
+                </span>
+            </li>
+            <li class="mobile_menu_item" id="to_pourquoi_nous">
+                <img src="http://logistic-solution.fr/wp-content/uploads/2018/10/info.png" alt="about">
+                <span>
+                    Pourquoi nous choisir
+                </span>
+            </li>
+            <li class="mobile_menu_item" id="to_tarifs">
+                <img src="http://logistic-solution.fr/wp-content/uploads/2018/10/euro.png" alt="pricing">
+                <span>
+                    Tarifs
+                </span>
+            </li>
+            <li class="mobile_menu_item" id="to_contact">
+                <img src="http://logistic-solution.fr/wp-content/uploads/2018/10/contact.png" alt="contact">
+                <span>
+                    Contact
+                </span>
+            </li>
+        </ul>
+        <a href="tel:5555555555" id="mobile_menu_content_footer_container">
+            <img src="http://logistic-solution.fr/wp-content/uploads/2018/10/auricular-phone-symbol-in-a-circle.png"
+                 alt="call">
+            <span>
+                Appelez-nous !
+            </span>
+        </a>
+    </div>
 </header>

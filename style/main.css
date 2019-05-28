@@ -1,6 +1,5 @@
 /******************************************** GENERALS RULES *******************************************/
 body, html{
-    height: 100%;
     overflow:auto;
     overflow-x: hidden;
     font-family: 'Source Sans Pro' !important;
@@ -95,6 +94,120 @@ div#logo_container img{
     width: 35px;
 }
 /******************************************** HEADER NAV BAR *******************************************/
+
+#mobile_menu_overlay{
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    overflow: hidden;
+}
+
+#mobile_menu_content{
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000000;
+    transition: width 0.3s;
+}
+
+#mobile_menu_logo_text_container{
+    display: inline-block;
+    opacity: 0.6;
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+#mobile_menu_logo_text_container img{
+    width: 200px;
+}
+
+#mobile_close_menu_icon_container{
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    padding: 5px;
+    opacity: 0.3;
+}
+
+#mobile_close_menu_icon_container img{
+    width: 22px;
+}
+
+#mobile_menu_content_ul{
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+
+}
+
+.mobile_menu_item{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px !important;
+    margin-bottom: 8px;
+    padding-top: 8px;
+    padding-right: 20px;
+    padding-left: 20px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.mobile_menu_item img{
+    width: 22px;
+    margin-right: 15px;
+}
+
+#mobile_menu_content_footer_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background: #69bcea;
+    font-size: 25px;
+    color: white;
+    white-space: nowrap;
+}
+
+#mobile_menu_content_footer_container a:link, #mobile_menu_content_footer_container a:active, #mobile_menu_content_footer_container a:hover, #mobile_menu_content_footer_container a:visited{
+    text-decoration:none;
+    color: white;
+    white-space: nowrap;
+
+}
+
+#mobile_menu_content_footer_container img{
+    width: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/******************************************** SIDE NAV MENU*******************************************/
+
+/******************************************** SIDE NAV MENU*******************************************/
 /******************************************** HEADER IMAGE *******************************************/
 div#header_image{
     z-index: 1;
@@ -370,9 +483,22 @@ div.convoyage_step_container img{
     background: #808080;
 }
 
+#alertMapRouteError {
+    z-index: 1000001;
+    position: fixed;
+    left: 50%;
+    width: 95%;
+    margin-left: -47%;
+    top: 30%;
+    text-align: center;
+    display: none;
+}
+
+
 #map{
+    position: relative;
     width: 100%;
-    height: 100%;
+    display: none;
 }
 
 @media screen and (max-width: 1080px) {
@@ -781,7 +907,7 @@ p.btn-switch{
 /********** TABLE SECTION ********$*/
 
  div.result_from_map{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -901,7 +1027,7 @@ div.result_from_map .div_price_button img{
 
 /********** Mobile TABLE SECTION ********$*/
  div.result_from_map_mobile{
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -975,3 +1101,26 @@ div.result_from_map_mobile .div_price_button img{
 
 /********************** tarif result section ***********************/
 /******************************************** TARIFS SECTION  *******************************************/
+/******************************************** CONTACT SECTION  *******************************************/
+div.prologContactSectionContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.contactFormContainer .row{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.contactFormContainer .inp input {
+    width: 200px;
+}
+
+div.contactFormContainer .inp {
+    width: 200px;
+}
+/******************************************** CONTACT SECTION  *******************************************/
